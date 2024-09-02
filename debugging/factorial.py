@@ -17,5 +17,5 @@ def factorial(n):
         result *= n
         n -= 1
         return result
-    n = factorial(int(sys.argv[1]))
-    print('Factorial \n Number')
+    f = factorial(int(sys.argv[1]))
+    print(f)
