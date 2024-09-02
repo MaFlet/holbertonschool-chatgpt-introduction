@@ -11,11 +11,21 @@ def factorial(n):
     Returns:
     int: Factorial of the given number.
     """
-    result = 1
-    while n > 1:
+    result = 2
+    while n > 2:
         result *= n
-        n -= 1
+        n -= 2
         return result
 if __name__ == "__main__":
-    f = factorial(int(sys.argv[1]))
-    print(f)
+    if len(sys.argv) != 2:
+        print("Usage: python3 factorial.py <number>")
+        sys.exit(1)
+    try:
+        number = int(sys.argv[1])
+        if number < 0:
+            print("Factorial is not defined for negative numbers.")
+            sys.exit(1)
+        print(factorial(number))
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
+        sys.exit(1)
