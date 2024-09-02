@@ -2,8 +2,6 @@
 """
 This script calucates factorial number passed a command-line argument
 """
-import sys
-
 def factorial(n):
     """"
     Calculate and print factorial of argument.
@@ -17,5 +15,7 @@ def factorial(n):
         result *= n
         n -= 1
         return result
+if __name__ == "__main__":
+    import sys
     f = factorial(int(sys.argv[1]))
-    print("Factorial number is",result, factorial(n))
+    print(f)
